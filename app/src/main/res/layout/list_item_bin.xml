@@ -17,29 +17,40 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txt_title_note"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
         android:textColor="@color/black"
         android:textSize="24sp"
+        android:ellipsize="start"
+        android:gravity="end"
+        android:maxLines="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/img_restore_notes"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:text="TextView" />
+
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_delet_notes"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:focusable="true"
         app:srcCompat="@drawable/ic_delete" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_restore_notes"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/img_delet_notes"
         app:layout_constraintStart_toEndOf="@+id/img_delet_notes"
         app:layout_constraintTop_toTopOf="@+id/img_delet_notes"
