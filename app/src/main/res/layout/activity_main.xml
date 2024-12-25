@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    android:id="@+id/main"
+    tools:context=".ui.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/baseline_delete_outline_24"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_re_bin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/been"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notesss"
+            android:textColor="@color/ebb3"
+            android:textSize="25sp"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="3dp"
+        tools:listitem="@layout/list_item_note"
+        android:id="@+id/recycler_note"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        style="@style/customAlertDialog"
+        android:id="@+id/img_add_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/ebb2"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_add"
+        app:maxImageSize="45dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

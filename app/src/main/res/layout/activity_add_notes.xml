@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00653d"
+
+    tools:context=".ui.AddNotesActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/toll"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/addnotess"
+            android:textColor="#ebebeb"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/back_24" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_title_note"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/back_item_list"
+        android:hint="@string/wewewewew"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_detail_note"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/back_item_list"
+        android:gravity="start"
+        android:hint="@string/dedede"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_title_note" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:textColor="@color/ebb2"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="sdsdssdsdsd" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:padding="3dp"
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/back_item_list"
+            android:text="@string/savenote"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

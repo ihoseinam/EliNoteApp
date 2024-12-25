@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Notes Zori</string>
+    <string name="been">سطل زباله</string>
+    <string name="wewewewew">عنوان </string>
+    <string name="dedede">توضیحات </string>
+    <string name="savenote">ذخـیره کـردن</string>
+    <string name="cancel">منصرف شدن</string>
+    <string name="notesss">نوشته ها</string>
+    <string name="addnotess">افزودن یادداشت</string>
+    <string name="todo">TODO</string>
+</resources>
