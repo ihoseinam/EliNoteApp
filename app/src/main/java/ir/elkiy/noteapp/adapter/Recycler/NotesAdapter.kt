@@ -49,8 +49,7 @@ class NotesAdapter(
             binding.txtTitleNote.text = data.title
             binding.imgDeletNotes.setOnClickListener {
 
-
-                AlertDialog.Builder(ContextThemeWrapper(context, R.style.customAlertDialog))
+                AlertDialog.Builder(context)
                     .setCancelable(false)
                     .setTitle("حذف یاداشت")
                     .setMessage("آیا میخواهید یاداشت به سطل زباله منتقل شود؟")

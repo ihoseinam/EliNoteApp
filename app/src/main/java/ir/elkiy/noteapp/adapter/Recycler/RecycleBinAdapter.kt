@@ -47,12 +47,11 @@ class RecycleBinAdapter(
             binding.txtTitleNote.text = data.title
 
             binding.imgDeletNotes.setOnClickListener {
-                AlertDialog.Builder(ContextThemeWrapper(context, R.style.customAlertDialog))
+                AlertDialog.Builder(context)
                     .setCancelable(false)
                     .setTitle("حذف یاداشت")
                     .setMessage("آیا میخواهید یاداشت برای همیشه حذف شود؟")
                     .setIcon(R.drawable.ic_delete)
-
                     .setNegativeButton("بله") { _, _ ->
                         val result = dao.deleteNotes(data.id)
                         if (result) {
@@ -74,7 +73,7 @@ class RecycleBinAdapter(
             }
 
             binding.imgRestoreNotes.setOnClickListener {
-                AlertDialog.Builder(ContextThemeWrapper(context, R.style.customAlertDialog))
+                AlertDialog.Builder(context)
                     .setCancelable(false)
                     .setTitle("بازگردانی یاداشت")
                     .setMessage("آیا میخواهید یاداشت بازگردانی شود؟")
