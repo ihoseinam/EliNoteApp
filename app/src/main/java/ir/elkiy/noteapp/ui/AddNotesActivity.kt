@@ -1,4 +1,4 @@
-package ir.hoseinahmadi.noteapp.ui
+package ir.elkiy.noteapp.ui
 
 import android.graphics.Color
 import android.os.Bundle
@@ -7,11 +7,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
-import ir.hoseinahmadi.noteapp.data.DBHelper
-import ir.hoseinahmadi.noteapp.data.dao.NotesDao
-import ir.hoseinahmadi.noteapp.data.model.DBNotesModel
-import ir.hoseinahmadi.noteapp.databinding.ActivityAddNotesBinding
-import ir.hoseinahmadi.noteapp.utils.PersianDate
+import ir.elkiy.noteapp.data.DBHelper
+import ir.elkiy.noteapp.data.dao.NotesDao
+import ir.elkiy.noteapp.data.model.DBNotesModel
+import ir.elkiy.noteapp.databinding.ActivityAddNotesBinding
+import ir.elkiy.noteapp.utils.PersianDate
 
 class AddNotesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddNotesBinding

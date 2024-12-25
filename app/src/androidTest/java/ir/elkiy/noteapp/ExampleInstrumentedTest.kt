@@ -1,4 +1,4 @@
-package ir.hoseinahmadi.noteapp
+package ir.elkiy.noteapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

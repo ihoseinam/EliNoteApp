@@ -1,4 +1,4 @@
-package ir.hoseinahmadi.noteapp.data.model
+package ir.elkiy.noteapp.data.model
 
 data class RecyclerNOtesModel (
     val id :Int,

@@ -1,4 +1,4 @@
-package ir.hoseinahmadi.noteapp
+package ir.elkiy.noteapp
 
 import org.junit.Test
 

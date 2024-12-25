@@ -1,4 +1,4 @@
-package ir.hoseinahmadi.noteapp.adapter.Recycler
+package ir.elkiy.noteapp.adapter.Recycler
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
@@ -10,14 +10,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
-import ir.hoseinahmadi.noteapp.R
-import ir.hoseinahmadi.noteapp.data.DBHelper
-import ir.hoseinahmadi.noteapp.data.dao.NotesDao
-import ir.hoseinahmadi.noteapp.data.model.RecyclerNOtesModel
-import ir.hoseinahmadi.noteapp.databinding.ListItemNoteBinding
-import ir.hoseinahmadi.noteapp.ui.AddNotesActivity
+import ir.elkiy.noteapp.R
+import ir.elkiy.noteapp.data.DBHelper
+import ir.elkiy.noteapp.data.dao.NotesDao
+import ir.elkiy.noteapp.data.model.RecyclerNOtesModel
+import ir.elkiy.noteapp.databinding.ListItemNoteBinding
+import ir.elkiy.noteapp.ui.AddNotesActivity
 
 class NotesAdapter(
     private val context: Context,

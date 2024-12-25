@@ -1,4 +1,4 @@
-package ir.hoseinahmadi.noteapp.ui
+package ir.elkiy.noteapp.ui
 
 import android.content.Context
 import android.content.Intent
@@ -10,11 +10,11 @@ import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import ir.hoseinahmadi.noteapp.R
-import ir.hoseinahmadi.noteapp.adapter.Recycler.NotesAdapter
-import ir.hoseinahmadi.noteapp.data.DBHelper
-import ir.hoseinahmadi.noteapp.data.dao.NotesDao
-import ir.hoseinahmadi.noteapp.databinding.ActivityMainBinding
+import ir.elkiy.noteapp.R
+import ir.elkiy.noteapp.adapter.Recycler.NotesAdapter
+import ir.elkiy.noteapp.data.DBHelper
+import ir.elkiy.noteapp.data.dao.NotesDao
+import ir.elkiy.noteapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

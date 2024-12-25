@@ -1,13 +1,13 @@
-package ir.hoseinahmadi.noteapp.ui
+package ir.elkiy.noteapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import ir.hoseinahmadi.noteapp.adapter.Recycler.RecycleBinAdapter
-import ir.hoseinahmadi.noteapp.data.DBHelper
-import ir.hoseinahmadi.noteapp.data.dao.NotesDao
-import ir.hoseinahmadi.noteapp.databinding.ActivityRecycleBinBinding
+import ir.elkiy.noteapp.adapter.Recycler.RecycleBinAdapter
+import ir.elkiy.noteapp.data.DBHelper
+import ir.elkiy.noteapp.data.dao.NotesDao
+import ir.elkiy.noteapp.databinding.ActivityRecycleBinBinding
 
 class RecycleBinActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRecycleBinBinding

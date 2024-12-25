@@ -1,4 +1,4 @@
-package ir.hoseinahmadi.noteapp.data
+package ir.elkiy.noteapp.data
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase

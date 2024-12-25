@@ -1,10 +1,10 @@
-package ir.hoseinahmadi.noteapp.data.dao
+package ir.elkiy.noteapp.data.dao
 
 import android.content.ContentValues
 import android.database.Cursor
-import ir.hoseinahmadi.noteapp.data.DBHelper
-import ir.hoseinahmadi.noteapp.data.model.DBNotesModel
-import ir.hoseinahmadi.noteapp.data.model.RecyclerNOtesModel
+import ir.elkiy.noteapp.data.DBHelper
+import ir.elkiy.noteapp.data.model.DBNotesModel
+import ir.elkiy.noteapp.data.model.RecyclerNOtesModel
 
 class NotesDao(private val db: DBHelper) {
     private lateinit var cursor: Cursor

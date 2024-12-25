@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'ir.hoseinahmadi.noteapp'
+    namespace 'ir.elkiy.noteapp'
     compileSdk 34
 
 
@@ -12,7 +12,7 @@ android {
         viewBinding true
     }
     defaultConfig {
-        applicationId "ir.hoseinahmadi.noteapp"
+        applicationId "ir.elkiy.noteapp"
         minSdk 24
         targetSdk 34
         versionCode 1
