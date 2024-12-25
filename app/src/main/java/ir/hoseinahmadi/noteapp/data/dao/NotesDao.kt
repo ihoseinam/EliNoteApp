@@ -58,7 +58,7 @@ class NotesDao(private val db: DBHelper) {
 
     fun getNotesForRecycler(value: String): ArrayList<RecyclerNOtesModel> {
         val database = db.readableDatabase
-        val query = "SELECT ${DBHelper.NOTES_ID},${DBHelper.NOTES_TITLE}" +
+        val query = "SELECT ${DBHelper.NOTES_ID}, ${DBHelper.NOTES_TITLE}, ${DBHelper.NOTES_DETAIL}" +
                 " FROM ${DBHelper.NOTES_TABLE}" +
                 " WHERE ${DBHelper.NOTES_DELETE_STATE} = ?"
         cursor = database.rawQuery(query, arrayOf(value))
@@ -66,8 +66,8 @@ class NotesDao(private val db: DBHelper) {
         cursor.close()
         database.close()
         return data
-
     }
+
 
     fun getNotesById(id: Int): DBNotesModel {
         val database = db.readableDatabase
@@ -106,7 +106,8 @@ class NotesDao(private val db: DBHelper) {
                 do {
                     val id = cursor.getInt(getIndex(DBHelper.NOTES_ID))
                     val title = cursor.getString(getIndex(DBHelper.NOTES_TITLE))
-                    data.add(RecyclerNOtesModel(id, title))
+                    val body = cursor.getString(getIndex(DBHelper.NOTES_DETAIL))
+                    data.add(RecyclerNOtesModel(id = id,title =title,body=body))
                 } while (cursor.moveToNext())
         } catch (_: Exception) {
         }

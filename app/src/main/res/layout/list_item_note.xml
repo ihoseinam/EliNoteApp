@@ -31,13 +31,28 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_delet_notes"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginStart="5dp"
+            android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:clickable="true"
             app:srcCompat="@drawable/ic_delete" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_shared_notes"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:layout_marginStart="8dp"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/img_delet_notes"
+            app:layout_constraintStart_toEndOf="@+id/img_delet_notes"
+            app:layout_constraintTop_toTopOf="@+id/img_delet_notes"
+            app:srcCompat="@drawable/ic_share" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_recycler"
+        android:icon="@drawable/ic_delete"
+        android:title="سطل زباله" />
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_share"
+        android:title="اشتراک گذاری برنامه" />
+    <item
+        android:id="@+id/nav_start"
+        android:icon="@drawable/baseline_stars_24"
+        android:title="امتیاز برنامه" />
+    <item
+        android:id="@+id/exit"
+        android:icon="@drawable/baseline_exit_to_app_24"
+        android:title="خروح" />
+</menu>

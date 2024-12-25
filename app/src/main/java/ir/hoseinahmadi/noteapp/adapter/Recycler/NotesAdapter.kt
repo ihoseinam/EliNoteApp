@@ -45,7 +45,6 @@ class NotesAdapter(
 
     inner class NotesViewHolder(
         private val binding: ListItemNoteBinding,
-
         ) : RecyclerView.ViewHolder(binding.root) {
         fun setDta(data: RecyclerNOtesModel) {
             binding.txtTitleNote.text = data.title
@@ -77,6 +76,9 @@ class NotesAdapter(
                     .show()
 
             }
+            binding.imgSharedNotes.setOnClickListener {
+                shareText(context, "${data.title}\n\n${data.body}")
+            }
             binding.root.setOnClickListener {
                 val intent = Intent(context, AddNotesActivity::class.java)
                 intent.putExtra("notesId", data.id)
@@ -99,7 +101,13 @@ class NotesAdapter(
     }
 
 
-
+    fun shareText(context: Context, text: String) {
+        val intent = Intent(Intent.ACTION_SEND).apply {
+            type = "text/plain"
+            putExtra(Intent.EXTRA_TEXT, text)
+        }
+        context.startActivity(Intent.createChooser(intent, "اشتراک‌گذاری متن با:"))
+    }
 
 
 }

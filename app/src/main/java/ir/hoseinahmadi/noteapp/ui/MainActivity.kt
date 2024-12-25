@@ -1,8 +1,12 @@
 package ir.hoseinahmadi.noteapp.ui
 
+import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -58,16 +62,42 @@ class MainActivity : AppCompatActivity() {
         })
 
 
-        binding.txtReBin.setOnClickListener {
-            val intent = Intent(this,RecycleBinActivity::class.java)
-            startActivity(intent)
-        }
+      /*  binding.txtReBin.setOnClickListener {
+
+        }*/
         binding.imgAddNote.setOnClickListener {
             val intent = Intent(this, AddNotesActivity::class.java)
             intent.putExtra("newNotes", true)
             startActivity(intent)
         }
 
+        binding.icMenu.setOnClickListener {
+            binding.drawerLayout.openDrawer(binding.navView,true)
+        }
+        binding.navView.setNavigationItemSelectedListener {item->
+            when (item.itemId) {
+                R.id.nav_recycler -> {
+                    val intent = Intent(this,RecycleBinActivity::class.java)
+                    startActivity(intent)
+                    binding.drawerLayout.closeDrawer(GravityCompat.END)
+                    true
+                }
+                R.id.nav_share -> {
+                    shareLink(this, url = "https://cafebazaar.ir/app/?id=info.alirezaahmadi.eee&ref=share")
+                    binding.drawerLayout.closeDrawer(GravityCompat.END)
+                    true
+                }
+                R.id.nav_start -> {
+                    binding.drawerLayout.closeDrawer(GravityCompat.END)
+                    true
+                }
+                R.id.exit -> {
+                    finish()
+                    true
+                }
+                else -> false
+            }
+        }
         initRecycler()
 
     }
@@ -90,5 +120,32 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
+}
+
+
+fun shareLink(context: Context, url: String) {
+    try {
+        val shareIntent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, url)
+            type = "text/plain"
+        }
+        context.startActivity(Intent.createChooser(shareIntent, "Share link via"))
+    } catch (e: Exception) {
+        Toast.makeText(context, "خطا", Toast.LENGTH_SHORT).show()
+    }
+}
+
+fun comments(context: Context) {
+    val intent = Intent(Intent.ACTION_EDIT).apply {
+        setData(Uri.parse("bazaar://details?id=" + context.packageName))
+        setPackage("com.farsitel.bazaar")
+    }
+    try {
+        context.startActivity(intent)
+    } catch (e: Exception) {
+        Toast.makeText(context, "خطا", Toast.LENGTH_SHORT).show()
+    }
 
 }
