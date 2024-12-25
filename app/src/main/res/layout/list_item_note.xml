@@ -8,8 +8,8 @@
     android:layout_marginHorizontal="8dp"
     android:layout_marginVertical="4dp"
     app:cardCornerRadius="15dp"
-    app:cardBackgroundColor="@color/white"
-    app:cardElevation="5dp">
+    app:cardBackgroundColor="@color/dark_gray"
+    app:cardElevation="8dp">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:background="@color/white"
         android:layout_width="match_parent"
@@ -20,18 +20,20 @@
             android:id="@+id/txt_title_note"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:ellipsize="start"
-            android:gravity="end"
+            android:ellipsize="end"
+            android:gravity="start|end"
             android:maxLines="1"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="21sp"
+            android:textDirection="rtl"
+            android:layout_marginHorizontal="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/img_shared_notes"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            tools:text="TextView" />
+            tools:text="این یک متن آزمایشی است" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_delet_notes"
@@ -50,7 +52,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:clickable="true"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="5dp"
             android:focusable="true"
             app:layout_constraintBottom_toBottomOf="@+id/img_delet_notes"
             app:layout_constraintStart_toEndOf="@+id/img_delet_notes"
